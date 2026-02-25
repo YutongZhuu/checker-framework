@@ -114,8 +114,6 @@ task copyAndMinimizeAnnotatedJdkFiles(type: JavaExec, dependsOn: cloneAnnotatedJ
     classpath = sourceSets.stubifier.runtimeClasspath
     standardOutput = System.out
     errorOutput = System.err
-    // Try suggestion from Copilot. Seems unlikely to work.
-    jvmArgs '-Xss16m'
 
     mainClass = 'org.checkerframework.framework.stubifier.JavaStubifier'
     args outputDir
